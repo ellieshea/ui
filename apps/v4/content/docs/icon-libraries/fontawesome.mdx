@@ -1,0 +1,128 @@
+---
+title: FontAwesome
+description: Using FontAwesome icons in shadcn/ui
+---
+
+## Installation
+
+Install the FontAwesome React package:
+
+```bash
+npm install @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+```
+
+Or with pnpm:
+
+```bash
+pnpm add @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+```
+
+## Usage
+
+### Basic Usage
+
+```tsx showLineNumbers
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faCog } from '@fortawesome/free-solid-svg-icons'
+
+export function IconDemo() {
+  return (
+    <div className="flex gap-4">
+      <FontAwesomeIcon icon={faHome} className="h-5 w-5" />
+      <FontAwesomeIcon icon={faCog} className="h-5 w-5" />
+    </div>
+  )
+}
+```
+
+### Solid Icons
+
+Import solid icons from `@fortawesome/free-solid-svg-icons`:
+
+```tsx showLineNumbers
+import { faBell, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+export function SolidIcons() {
+  return (
+    <div className="flex gap-2">
+      <FontAwesomeIcon icon={faBell} className="h-4 w-4" />
+      <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
+      <FontAwesomeIcon icon={faUser} className="h-4 w-4" />
+    </div>
+  )
+}
+```
+
+### Brand Icons
+
+Import brand icons from `@fortawesome/free-brands-svg-icons`:
+
+```tsx showLineNumbers
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+export function BrandIcons() {
+  return (
+    <div className="flex gap-2">
+      <FontAwesomeIcon icon={faGithub} className="h-4 w-4" />
+      <FontAwesomeIcon icon={faTwitter} className="h-4 w-4" />
+      <FontAwesomeIcon icon={faLinkedin} className="h-4 w-4" />
+    </div>
+  )
+}
+```
+
+## Styling
+
+You can customize FontAwesome icons with Tailwind CSS classes:
+
+```tsx showLineNumbers
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFire } from '@fortawesome/free-solid-svg-icons'
+
+export function StyledIcon() {
+  return (
+    <>
+      {/* Size variants */}
+      <FontAwesomeIcon icon={faFire} className="h-4 w-4" />
+      <FontAwesomeIcon icon={faFire} className="h-6 w-6" />
+      <FontAwesomeIcon icon={faFire} className="h-8 w-8" />
+
+      {/* Color variants */}
+      <FontAwesomeIcon icon={faFire} className="text-red-500" />
+      <FontAwesomeIcon icon={faFire} className="text-blue-500" />
+      <FontAwesomeIcon icon={faFire} className="text-green-500" />
+    </>
+  )
+}
+```
+
+## In Components
+
+Use FontAwesome icons throughout your components:
+
+```tsx showLineNumbers title="components/button-with-icon.tsx"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@/components/ui/button'
+
+export function ButtonWithIcon() {
+  return (
+    <Button>
+      Submit
+      <FontAwesomeIcon icon={faArrowRight} className="ml-2 h-4 w-4" />
+    </Button>
+  )
+}
+```
+
+## Icon Gallery
+
+Browse all available FontAwesome icons at [Font Awesome Icon Library](https://fontawesome.com/icons).
+
+## Resources
+
+- [FontAwesome Official Documentation](https://fontawesome.com/docs/web/use-with/react)
+- [Free Solid Icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
+- [Free Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free)
