@@ -1,6 +1,6 @@
 "use client"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
   faCog,
@@ -9,8 +9,11 @@ import {
   faUser,
   faFire,
   faHeart,
-} from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+  faCheckCircle,
+  faClock,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons"
+import { faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 export function FontAwesomeIconsDemo() {
   return (
@@ -31,8 +34,9 @@ export function FontAwesomeIconsDemo() {
         <div className="flex gap-4">
           <FontAwesomeIcon icon={faFire} className="h-6 w-6 text-red-500" />
           <FontAwesomeIcon icon={faHeart} className="h-6 w-6 text-pink-500" />
-          <FontAwesomeIcon icon={faBell} className="h-6 w-6 text-yellow-500" />
-          <FontAwesomeIcon icon={faSearch} className="h-6 w-6 text-blue-500" />
+          <FontAwesomeIcon icon={faCheckCircle} className="h-6 w-6 text-green-500" />
+          <FontAwesomeIcon icon={faClock} className="h-6 w-6 text-yellow-500" />
+          <FontAwesomeIcon icon={faShoppingCart} className="h-6 w-6 text-blue-500" />
         </div>
       </div>
 
@@ -47,7 +51,7 @@ export function FontAwesomeIconsDemo() {
 
       <div>
         <h3 className="mb-4 text-sm font-semibold">Size Variants</h3>
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <FontAwesomeIcon icon={faHome} className="h-4 w-4" />
           <FontAwesomeIcon icon={faHome} className="h-6 w-6" />
           <FontAwesomeIcon icon={faHome} className="h-8 w-8" />
